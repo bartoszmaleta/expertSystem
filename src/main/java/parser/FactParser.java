@@ -31,10 +31,16 @@ public class FactParser extends XMLParser {
                         .getTextContent();
 
                 Fact newFact = new Fact(factID, factDescription);
-
+                NodeList evals = element.getElementsByTagName("Eval");
+                for (int j = 0; j < evals.getLength(); j++) {
+                    Element eval = (Element) evals.item(j);
+                    String factEvalId = eval.getAttribute("id");
+                    String factEvalValue = eval.getTextContent();
+                    newFact.setFactValueById(factEvalId, Boolean.valueOf(factEvalValue));
+                }
+                factRepository.addFact(newFact);
             }
         }
-        // TODO
     }
 
     public FactRepository getFactRepository() {
