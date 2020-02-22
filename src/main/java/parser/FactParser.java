@@ -1,7 +1,7 @@
 package parser;
 
 import model.Fact;
-import model.FactRepository;
+import repository.FactRepository;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

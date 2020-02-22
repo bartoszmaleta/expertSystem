@@ -1,4 +1,6 @@
-package model;
+package repository;
+
+import model.Fact;
 
 import java.util.ArrayList;
 import java.util.Iterator;
