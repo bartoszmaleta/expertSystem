@@ -13,35 +13,36 @@ public class Fact {
     public Fact(String id,  String description) {
         this.id = id;
         this.description = description;
-        properties = new HashMap<>();
-    }
-
-    public void addEval(String eval) {
-        this.evals.add(eval);
+        this.properties = new HashMap<>();
     }
 
     public Map<String, Boolean> getProperties() {
-        return  properties;
+        return properties;
     }
 
     public void setFactValueById(String id, boolean value) {
-//        TODO
+        this.properties.put(id, value);
     }
 
     public Set<String> getEvals() {
         return evals;
     }
 
-    // TODO
     public boolean getValueById(String id) {
-//        int idInt = Integer.parseInt(id);
-        for (String eval : evals) {
-            if (eval.equals(id)) {
-                return true;
-            }
-        }
-        return false;
+        boolean value = properties.get(id);
+        return  value;
     }
+
+    // TODO
+//    public boolean getValueById(String id) {
+////        int idInt = Integer.parseInt(id);
+//        for (String eval : evals) {
+//            if (eval.equals(id)) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 
     public String getDescription() {
         return description;
