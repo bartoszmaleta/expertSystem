@@ -1,14 +1,16 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class FactRepository {
     private List<Fact> facts;
-    private int size;
+    private Iterator<Fact> factIterator;
 
-    public FactRepository(List<Fact> facts) {
-        this.facts = facts;
+    public FactRepository() {
+        this.facts = new ArrayList<>();
+        this.factIterator = new FactIterator();
     }
 
     public List<Fact> getFacts() {
@@ -19,9 +21,12 @@ public class FactRepository {
         facts.add(fact);
     }
 
+    public Iterator<Fact> getIterator() {
+        return factIterator;
+    }
+
     private class FactIterator implements Iterator {
         int index;
-
 
         @Override
         public boolean hasNext() {
@@ -29,6 +34,9 @@ public class FactRepository {
                 return true;
             }
             return false;
+
+            //            One line solution!!!!
+//            return index < facts.size();
         }
 
         @Override
@@ -37,12 +45,9 @@ public class FactRepository {
                 return facts.get(index++);
             }
             return null;
+
+//            One line solution!!!!
+//            return hasNext() ? facts.get(index++) : null;
         }
-
-        // TODO: remove?
-    }
-
-    public Iterator getIterator() {
-        return new FactIterator();
     }
 }
