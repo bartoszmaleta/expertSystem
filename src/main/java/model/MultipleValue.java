@@ -3,6 +3,7 @@ package model;
 import java.util.List;
 
 public class MultipleValue extends Value {
+
     private List<String> params;
 
     public MultipleValue(List<String> params, boolean selectionType) {
@@ -10,7 +11,6 @@ public class MultipleValue extends Value {
         this.selectionType = selectionType;
     }
 
-    @Override
     public List<String> getInputPattern() {
         return params;
     }

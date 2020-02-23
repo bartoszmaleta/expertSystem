@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="plane">
+        <Question>Do you consider flying a plane?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="activity">
+        <Question>Do you like spend your time actively?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="monuments">
+        <Question>Do you like sightseeing?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="water">
+        <Question>Do you want to spend time near the water?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="condition">
+        <Question>What is more important to you?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="quiet,relax,nature,peace"/>
+            </Selection>
+
+            <Selection value="false">
+                <MultipleValue value="party,fun,beer,sport"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>

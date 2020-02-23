@@ -7,15 +7,16 @@ import java.util.List;
 public class Answer {
     private List<Value> values = new ArrayList<>();
 
-    public boolean evaluateAnswerByInput(String input) {
+    boolean evaluateAnswerByInput(String input) throws InputMismatchException {
+
         for (Value value : values) {
             for (String pattern : value.getInputPattern()) {
                 if (pattern.equals(input)) {
-                    return  value.getSelectionType();
+                    return value.getSelectionType();
                 }
             }
         }
-        throw new InputMismatchException("There is not answer like this in xml.\nEnter different.");
+        throw new InputMismatchException("We don't have this answer in our database.\nPlease try another one.");
     }
 
     public void addValue(Value value) {

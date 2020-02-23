@@ -14,11 +14,11 @@ public class Question {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getQuestion() {
-        return question;
+        return this.question;
     }
 
     public boolean getEvaluatedAnswer(String input) throws InputMismatchException {

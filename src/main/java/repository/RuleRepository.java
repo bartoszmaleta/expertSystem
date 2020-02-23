@@ -5,7 +5,7 @@ import model.Question;
 import java.util.*;
 
 public class RuleRepository {
-    //        TODO
+
     private Iterator<Question> questionIterator;
     private Map<String, Question> questions;
 
@@ -23,9 +23,9 @@ public class RuleRepository {
     }
 
     private class QuestionIterator implements Iterator<Question> {
+
         int index = 0;
         List<String> keyList;
-
 
         @Override
         public boolean hasNext() {

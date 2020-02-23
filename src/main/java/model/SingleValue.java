@@ -3,7 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SingleValue extends Value {
+public class SingleValue extends  Value {
+
     private String param;
 
     public SingleValue(String param, boolean selectionType) {
@@ -11,10 +12,9 @@ public class SingleValue extends Value {
         this.selectionType = selectionType;
     }
 
-    @Override
     public List<String> getInputPattern() {
         List<String> paramList = new ArrayList<>();
         paramList.add(param);
-        return  paramList;
+        return paramList;
     }
 }

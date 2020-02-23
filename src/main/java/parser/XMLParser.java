@@ -11,24 +11,21 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public abstract class XMLParser {
+
     Document doc;
 
-    public void loadXmlDocument(String xmlPath) {
+    void loadXmlDocument(String xmlPath) {
         try {
             File xmlFile = new File(xmlPath);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
-
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
         } catch (FileNotFoundException e) {
-            System.out.println("File does not exist");
+            System.out.println("File not found");
         } catch (IOException e) {
-            System.out.println("Error during reading");
-            e.printStackTrace();
-        } catch (SAXException e) {
+            System.out.println("Failed read attempt");
+        } catch (ParserConfigurationException | SAXException e) {
             e.printStackTrace();
         }
     }
