@@ -12,9 +12,9 @@ import java.io.IOException;
 
 public abstract class XMLParser {
 
-    Document doc;
+    public Document doc;
 
-    void loadXmlDocument(String xmlPath) {
+    public void loadXmlDocument(String xmlPath) {
         try {
             File xmlFile = new File(xmlPath);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

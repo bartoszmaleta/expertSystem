@@ -17,4 +17,8 @@ public class SingleValue extends  Value {
         paramList.add(param);
         return paramList;
     }
+
+    public String getParam() {
+        return this.param;
+    }
 }

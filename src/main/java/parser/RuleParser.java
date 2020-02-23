@@ -22,11 +22,11 @@ public class RuleParser extends XMLParser {
 
     private void parseRules(Document document) {
 
-        NodeList nList = document.getElementsByTagName("Rule");
+        NodeList nodes = document.getElementsByTagName("Rule");
 
-        for (int i = 0; i < nList.getLength(); i++) {
-            if (nList.item(i).getNodeName().equals("Rule")) {
-                ruleRepository.addQuestion(parseOneRule((Element) nList.item(i)));
+        for (int i = 0; i < nodes.getLength(); i++) {
+            if (nodes.item(i).getNodeName().equals("Rule")) {
+                ruleRepository.addQuestion(parseOneRule((Element) nodes.item(i)));
             }
         }
     }
@@ -55,31 +55,35 @@ public class RuleParser extends XMLParser {
 
         Boolean booleanValue = Boolean.valueOf(selection.getAttribute("value"));
 
-        NodeList list = selection.getChildNodes();
+        NodeList nodesList = selection.getChildNodes();
         Node valueNode;
         String valueStr;
         List<String> values;
         Value value = null;
 
-        for (int i = 0; i < list.getLength(); i++) {
-            if (list.item(i).getNodeName().equals("SingleValue")) {
-                valueNode = list.item(i).getAttributes().getNamedItem("value");
+        for (int i = 0; i < nodesList.getLength(); i++) {
+            if (nodesList.item(i).getNodeName().equals("SingleValue")) {
+                valueNode = nodesList.item(i).getAttributes().getNamedItem("value");
                 valueStr = valueNode.getNodeValue();
                 value = new SingleValue(valueStr, booleanValue);
 
             }
-            if (list.item(i).getNodeName().equals("MultipleValue")) {
-                valueNode = list.item(i).getAttributes().getNamedItem("value");
+            if (nodesList.item(i).getNodeName().equals("MultipleValue")) {
+                valueNode = nodesList.item(i).getAttributes().getNamedItem("value");
                 valueStr = valueNode.getNodeValue();
                 values = Arrays.asList(valueStr.split(","));
                 value = new MultipleValue(values, booleanValue);
+
+//                for (String elem : values) {
+//                    System.out.println(elem);
+//                }
+
             }
         }
         return value;
     }
 
     public RuleRepository getRuleRepository() {
-
         return this.ruleRepository;
     }
 }

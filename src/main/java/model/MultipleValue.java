@@ -14,4 +14,8 @@ public class MultipleValue extends Value {
     public List<String> getInputPattern() {
         return params;
     }
+
+    public List<String> getParams() {
+        return this.params;
+    }
 }

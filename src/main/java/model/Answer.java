@@ -5,10 +5,14 @@ import java.util.InputMismatchException;
 import java.util.List;
 
 public class Answer {
-    private List<Value> values = new ArrayList<>();
+    private List<Value> values;
+//    private List<Value> values = new ArrayList<>();
+
+    public Answer() {
+        this.values = new ArrayList<>();
+    }
 
     boolean evaluateAnswerByInput(String input) throws InputMismatchException {
-
         for (Value value : values) {
             for (String pattern : value.getInputPattern()) {
                 if (pattern.equals(input)) {
@@ -16,10 +20,14 @@ public class Answer {
                 }
             }
         }
-        throw new InputMismatchException("We don't have this answer in our database.\nPlease try another one.");
+        throw new InputMismatchException("This answer is not in database. Please try different answer.");
     }
 
     public void addValue(Value value) {
         values.add(value);
+    }
+
+    public List<Value> getValues() {
+        return this.values;
     }
 }

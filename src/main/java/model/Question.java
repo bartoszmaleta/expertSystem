@@ -1,6 +1,7 @@
 package model;
 
 import java.util.InputMismatchException;
+import java.util.List;
 
 public class Question {
     private String id;
@@ -23,5 +24,23 @@ public class Question {
 
     public boolean getEvaluatedAnswer(String input) throws InputMismatchException {
         return answer.evaluateAnswerByInput(input);
+    }
+
+    public Answer getAnswer() {
+        return this.answer;
+    }
+
+    public void displayPossibleAnswers() {
+        List<Value> possibleAnswersList = getAnswer().getValues();
+        for (Value possibleAnswer : possibleAnswersList) {
+            if (possibleAnswer instanceof MultipleValue) {
+                MultipleValue possibleAnswerCast = (MultipleValue) possibleAnswer;
+                List<String> possAnswersList = possibleAnswerCast.getParams();
+                for (String possAnswer : possAnswersList) {
+                    System.out.print(possAnswer + ", ");
+                }
+            }
+        }
+        System.out.println();
     }
 }

@@ -1,10 +1,13 @@
 import model.Fact;
+import model.MultipleValue;
 import model.Question;
+import model.Value;
 import repository.FactRepository;
 import parser.FactParser;
 import parser.RuleParser;
 import repository.RuleRepository;
 
+import javax.swing.plaf.multi.MultiInternalFrameUI;
 import java.util.*;
 
 public class ESProvider {
@@ -28,15 +31,18 @@ public class ESProvider {
         }
     }
 
-    private Boolean validateUserInput(Question q) {
+    private Boolean validateUserInput(Question question) {
         Scanner in = new Scanner(System.in);
         boolean success = false;
         Boolean validatedAnswer = null;
         while (!success) {
             try {
-                System.out.printf("%n%s ", q.getQuestion());
+                System.out.println("\n" + question.getQuestion());
+
+                question.displayPossibleAnswers();
+
                 String answer = in.nextLine();
-                validatedAnswer = q.getEvaluatedAnswer(answer);
+                validatedAnswer = question.getEvaluatedAnswer(answer);
                 success = true;
             } catch (InputMismatchException e) {
                 System.out.println(e.getMessage());
