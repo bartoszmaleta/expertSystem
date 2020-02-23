@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
-    <Fact id="mazury">
-        <Description value="Giżycko"/>
+    <Fact id="tesla">
+        <Description value="Tesla Model S"/>
         <Evals>
-            <Eval id="plane">false</Eval>
-            <Eval id="activity">true</Eval>
-            <Eval id="monuments">false</Eval>
-            <Eval id="water">true</Eval>
-            <Eval id="condition">false</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="comfort">true</Eval>
+            <Eval id="luxury">true</Eval>
+            <Eval id="ecological">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="baltyk">
-        <Description value="Władysławowo"/>
+    <Fact id="seat">
+        <Description value="Seat Leon"/>
         <Evals>
-            <Eval id="plane">false</Eval>
-            <Eval id="activity">false</Eval>
-            <Eval id="monuments">false</Eval>
-            <Eval id="water">true</Eval>
-            <Eval id="condition">false</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="comfort">true</Eval>
+            <Eval id="luxury">false</Eval>
+            <Eval id="ecological">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="mountains">
-        <Description value="Bieszczady"/>
+    <Fact id="porsche">
+        <Description value="Porsche 911"/>
         <Evals>
-            <Eval id="plane">false</Eval>
-            <Eval id="activity">true</Eval>
-            <Eval id="monuments">false</Eval>
-            <Eval id="water">false</Eval>
-            <Eval id="condition">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="comfort">false</Eval>
+            <Eval id="luxury">false</Eval>
+            <Eval id="ecological">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="forests">
-        <Description value="Bory Tucholskie"/>
+    <Fact id="ford">
+        <Description value="Ford Mondeo"/>
         <Evals>
-            <Eval id="plane">false</Eval>
-            <Eval id="activity">true</Eval>
-            <Eval id="monuments">false</Eval>
-            <Eval id="water">false</Eval>
-            <Eval id="condition">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="comfort">false</Eval>
+            <Eval id="luxury">false</Eval>
+            <Eval id="ecological">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="exotic">
-        <Description value="Majorka"/>
+    <Fact id="toyota">
+        <Description value="Toyota Prius"/>
         <Evals>
-            <Eval id="plane">true</Eval>
-            <Eval id="activity">false</Eval>
-            <Eval id="monuments">false</Eval>
-            <Eval id="water">true</Eval>
-            <Eval id="condition">false</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="comfort">false</Eval>
+            <Eval id="luxury">false</Eval>
+            <Eval id="ecological">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="exotic_active">
-        <Description value="Choracja"/>
+    <Fact id="mercedes">
+        <Description value="Mercedes S-class"/>
         <Evals>
-            <Eval id="plane">true</Eval>
-            <Eval id="activity">true</Eval>
-            <Eval id="monuments">true</Eval>
-            <Eval id="water">true</Eval>
-            <Eval id="condition">true</Eval>
+            <Eval id="family">true</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="comfort">true</Eval>
+            <Eval id="luxury">true</Eval>
+            <Eval id="ecological">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="exotic_active2">
-        <Description value="Peru"/>
+    <Fact id="lamborghini">
+        <Description value="Lamborghini Aventador"/>
         <Evals>
-            <Eval id="plane">false</Eval>
-            <Eval id="activity">true</Eval>
-            <Eval id="monuments">true</Eval>
-            <Eval id="water">false</Eval>
-            <Eval id="condition">true</Eval>
+            <Eval id="family">false</Eval>
+            <Eval id="money">true</Eval>
+            <Eval id="comfort">false</Eval>
+            <Eval id="luxury">true</Eval>
+            <Eval id="ecological">false</Eval>
         </Evals>
     </Fact>
 </Facts>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rules>
-    <Rule id="plane">
-        <Question>Do you consider flying a plane?</Question>
+    <Rule id="family">
+        <Question>Do you want family car?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -11,20 +11,8 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="activity">
-        <Question>Do you like spend your time actively?</Question>
-        <Answer>
-            <Selection value="true">
-                <SingleValue value="yes"/>
-            </Selection>
-
-            <Selection value="false">
-                <SingleValue value="no"/>
-            </Selection>
-        </Answer>
-    </Rule>
-    <Rule id="monuments">
-        <Question>Do you like sightseeing?</Question>
+    <Rule id="money">
+        <Question>Do you want to spend a lot of money?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -35,8 +23,20 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="water">
-        <Question>Do you want to spend time near the water?</Question>
+    <Rule id="comfort">
+        <Question>Do you like comfort?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="luxury">
+        <Question>Do you like luxury?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -46,15 +46,15 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="condition">
-        <Question>What is more important to you?</Question>
+    <Rule id="ecological">
+        <Question>What is the most important to you?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="quiet,relax,nature,peace"/>
+                <MultipleValue value="quiet,zero-pollution,electric,modern"/>
             </Selection>
 
             <Selection value="false">
-                <MultipleValue value="party,fun,beer,sport"/>
+                <MultipleValue value="fast,strong,big,cheap"/>
             </Selection>
         </Answer>
     </Rule>
