@@ -35,6 +35,10 @@ public class FactRepository {
 
         @Override
         public Fact next() {
+            // TODO: above to constructor!
+            // TODO: FactIterator class move to another class
+            // FactIterator iterator = (FactIterator) facts.listIterator();
+
             return hasNext() ? facts.get(index++) : null;
         }
     }
